@@ -13,8 +13,9 @@ class MyWidget(QWidget):
         self.combo.move(50, 30)
         self.combo.currentIndexChanged.connect(self.selectionChanged)
 
-    def selectionChanged(self):
+    def selectionChanged(self,index):
         print(f"Selected: {self.combo.currentText()}")
+        print(f"Index: {index}")
 
 if __name__ == "__main__":
     app = QApplication([])
